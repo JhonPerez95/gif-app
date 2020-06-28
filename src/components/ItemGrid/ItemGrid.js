@@ -12,7 +12,7 @@ const ItemGrid = ({ id, title, url }) => {
 
 ItemGrid.propTypes = {
   id: PropTypes.string.isRequired,
-  tittle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
 
