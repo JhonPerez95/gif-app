@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const CategoryAdd = ({ setCategories }) => {
-  const [inputValue, setInputValue] = useState('Bleach');
+  const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -9,13 +10,20 @@ const CategoryAdd = ({ setCategories }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCategories((category) => [...category, inputValue]);
+    if (inputValue.trim().length > 2) {
+      setCategories((category) => [...category, inputValue]);
+      setInputValue('');
+    }
   };
   return (
     <form action="" onSubmit={handleSubmit}>
       <input type="text" value={inputValue} onChange={handleInputChange} />
     </form>
   );
+};
+
+CategoryAdd.propTypes = {
+  setCategories: PropTypes.func.isRequired,
 };
 
 export default CategoryAdd;
