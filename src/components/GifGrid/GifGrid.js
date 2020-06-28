@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import ItemGrid from '../ItemGrid/ItemGrid';
 
 const GifGrid = ({ category }) => {
   const [images, setImages] = useState([]);
@@ -26,6 +27,11 @@ const GifGrid = ({ category }) => {
   return (
     <>
       <h3>{category}</h3>
+      <div className="card-grid">
+        {images.map((item) => (
+          <ItemGrid key={item.id} {...item} />
+        ))}
+      </div>
     </>
   );
 };
