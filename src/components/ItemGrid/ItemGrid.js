@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ItemGrid = ({ id, title, url }) => {
+const ItemGrid = ({ title, url }) => {
   return (
-    <div className="card">
+    <div className="card animate__animated animate__rubberBand">
       <img src={url} alt={title} />
       <p>{title}</p>
     </div>
