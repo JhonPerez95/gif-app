@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemGrid from '../components/ItemGrid/ItemGrid';
+import ItemGrid from '../../components/ItemGrid/ItemGrid';
 import { shallow } from 'enzyme';
 
 describe('Pruebas al Componente ItemGrid ', () => {
