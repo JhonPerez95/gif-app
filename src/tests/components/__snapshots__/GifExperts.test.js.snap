@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing al componente GifExperts:  Debe mostrar GifGrid  que estan por defecto 1`] = `
+<Fragment>
+  <h1>
+    GifExperts
+  </h1>
+  <CategoryAdd
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol>
+    <GifGrid
+      category="Naruto"
+      key="Naruto"
+    />
+    <GifGrid
+      category="Bleach"
+      key="Bleach"
+    />
+    <GifGrid
+      category="Black Clover"
+      key="Black Clover"
+    />
+  </ol>
+</Fragment>
+`;
+
+exports[`Testing al componente GifExperts:  Renderizado correctamente del componente <GifExpert/>  1`] = `
+<Fragment>
+  <h1>
+    GifExperts
+  </h1>
+  <CategoryAdd
+    setCategories={[Function]}
+  />
+  <hr />
+  <ol>
+    <GifGrid
+      category="naruto"
+      key="naruto"
+    />
+  </ol>
+</Fragment>
+`;

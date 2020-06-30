@@ -1,4 +1,5 @@
 import React from 'react';
+import '@testing-library/jest-dom';
 import { shallow } from 'enzyme';
 
 import GifGrid from '../../components/GifGrid/GifGrid';
@@ -31,5 +32,7 @@ describe(' Testing al componente GifGrid', () => {
     const wrapper = shallow(<GifGrid category="Bleach" />);
 
     expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find('p').exists()).toBe(false);
+    expect(wrapper.find('ItemGrid').length).toBe(gifs.length);
   });
 });
