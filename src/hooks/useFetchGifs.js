@@ -12,7 +12,7 @@ export const useFetchGifs = (category) => {
   useEffect(() => {
     getGif(category).then((imgs) => {
       setTimeout(() => {
-        console.log(imgs);
+        // console.log(imgs);
         setstate({
           data: imgs,
           loading: false,
@@ -22,8 +22,4 @@ export const useFetchGifs = (category) => {
   }, [category]);
 
   return state;
-};
-
-useFetchGifs.propTypes = {
-  category: PropTypes.string.isRequired,
 };
